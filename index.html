@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Captura e PDF</title>
-    <!-- Carrega Tailwind CSS para estilização rápida e responsiva -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Carrega a biblioteca jsPDF para gerar o PDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
         /* Estilos personalizados para o botão de arquivo ficar invisível */
@@ -27,10 +25,9 @@
 
     <div id="app" class="w-full max-w-lg bg-white rounded-xl shadow-2xl p-6 md:p-8">
         <h1 class="text-3xl font-extrabold text-gray-900 mb-6 text-center">
-            Captura Móvel para PDF
+            📸 Captura Móvel para PDF
         </h1>
 
-        <!-- 1. Área de Seleção/Captura da Imagem -->
         <div class="relative mb-6">
             <label for="inputImagem" class="block text-sm font-medium text-gray-700 mb-2">
                 Passo 1: Capturar Foto ou Selecionar Imagem
@@ -38,23 +35,19 @@
             
             <div class="flex flex-col sm:flex-row gap-4">
                 
-                <!-- Botão para Câmera/Galeria -->
                 <div class="relative flex-1">
                     <button id="btnCapturar" class="w-full h-12 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-150">
                         <span id="captureText">Abrir Câmera / Galeria</span>
                     </button>
-                    <!-- O input de arquivo com 'capture' é o que faz a mágica acontecer no mobile -->
                     <input 
                         type="file" 
                         accept="image/*" 
                         capture="environment" 
                         id="inputImagem" 
                         class="custom-file-input"
-                        onchange="mostrarPreview(event)"
                     >
                 </div>
 
-                <!-- Botão para Galeria (Alternativa caso o 'capture' não funcione) -->
                 <div class="relative flex-1">
                     <button id="btnGaleria" class="w-full h-12 bg-gray-200 text-gray-800 font-semibold rounded-lg shadow-md hover:bg-gray-300 transition duration-150">
                         Selecionar na Galeria
@@ -64,13 +57,11 @@
                         accept="image/*" 
                         id="inputGaleria" 
                         class="custom-file-input"
-                        onchange="mostrarPreview(event)"
                     >
                 </div>
             </div>
         </div>
 
-        <!-- 2. Pré-visualização da Imagem -->
         <div id="previewContainer" class="mb-6 h-64 bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center overflow-hidden">
             <p id="previewPlaceholder" class="text-gray-400 text-center p-4">
                 A imagem capturada ou selecionada aparecerá aqui.
@@ -78,7 +69,6 @@
             <img id="imagePreview" class="hidden w-full h-full object-contain" src="#" alt="Pré-visualização da Imagem">
         </div>
 
-        <!-- 3. Conversão para PDF -->
         <button 
             id="btnConverter" 
             onclick="converterParaPDF()" 
@@ -88,7 +78,6 @@
             Passo 3: Converter e Baixar PDF
         </button>
 
-        <!-- Mensagens de Status -->
         <p id="statusMessage" class="text-center text-sm mt-4 text-gray-600">
             Selecione uma imagem para começar.
         </p>
@@ -99,23 +88,35 @@
         const imagePreview = document.getElementById('imagePreview');
         const btnConverter = document.getElementById('btnConverter');
         const statusMessage = document.getElementById('statusMessage');
-        const inputImagem = document.getElementById('inputImagem');
-        const inputGaleria = document.getElementById('inputGaleria');
+        const inputImagem = document.getElementById('inputImagem'); // O input da câmera
+        const inputGaleria = document.getElementById('inputGaleria'); // O input da galeria
         
-        let imagemBase64 = null; // Armazena a imagem Base64 para a conversão
+        // Adiciona os event listeners diretamente nos inputs
+        inputImagem.addEventListener('change', mostrarPreview);
+        inputGaleria.addEventListener('change', mostrarPreview);
+        
+        let imagemBase64 = null; 
 
         // Função para pré-visualizar a imagem e armazenar o Base64
         function mostrarPreview(event) {
             const arquivo = event.target.files[0];
 
             if (!arquivo) {
+                // Limpa o estado se o usuário cancelar a seleção
+                imagemBase64 = null;
+                imagePreview.classList.add('hidden');
+                previewPlaceholder.classList.remove('hidden');
+                btnConverter.disabled = true;
+                statusMessage.textContent = "Seleção cancelada. Selecione uma imagem para começar.";
                 return;
             }
             
-            // Limpa o outro input para garantir que apenas um arquivo seja processado
+            // Corrige o erro de limpar o input ativo:
             if (event.target.id === 'inputImagem') {
+                // Se o arquivo veio da CÂMERA, limpe o input da GALERIA.
                 inputGaleria.value = '';
-            } else {
+            } else if (event.target.id === 'inputGaleria') {
+                // Se o arquivo veio da GALERIA, limpe o input da CÂMERA.
                 inputImagem.value = '';
             }
 
