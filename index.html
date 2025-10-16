@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MySeg Informática</title>
+  <meta name="description" content="Soluções em TI, segurança da informação, suporte técnico e consultoria para empresas. MySeg Informática: tecnologia e proteção para o seu negócio." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-900 to-blue-600 flex items-center justify-center shadow-lg">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="4" width="20" height="16" rx="2" fill="white"/>
+            <path d="M6 9h12" stroke="#002060" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 14h6" stroke="#002060" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-xl font-semibold text-blue-900">MySeg Informática</h1>
+          <p class="text-sm text-gray-700">Segurança e Tecnologia para o seu negócio</p>
+        </div>
+      </div>
+      <div class="hidden md:flex gap-8 text-sm font-medium text-gray-800">
+        <a href="#home" class="hover:text-blue-900">Home</a>
+        <a href="#servicos" class="hover:text-blue-900">Serviços</a>
+        <a href="#diferenciais" class="hover:text-blue-900">Diferenciais</a>
+        <a href="#contato" class="hover:text-blue-900">Contato</a>
+        <a href="MySeg_Institucional.pdf" download
+           class="bg-blue-900 text-white px-4 py-2 rounded shadow hover:bg-blue-800 transition">Baixar PDF</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-blue-900 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+      <a href="#home" class="block px-6 py-3 border-b border-gray-100 hover:bg-blue-100">Home</a>
+      <a href="#servicos" class="block px-6 py-3 border-b border-gray-100 hover:bg-blue-100">Serviços</a>
+      <a href="#diferenciais" class="block px-6 py-3 border-b border-gray-100 hover:bg-blue-100">Diferenciais</a>
+      <a href="#contato" class="block px-6 py-3 border-b border-gray-100 hover:bg-blue-100">Contato</a>
+      <a href="MySeg_Institucional.pdf" download class="block px-6 py-3 hover:bg-blue-100">Baixar PDF</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="pt-24 max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-4xl font-extrabold text-blue-900 leading-tight">Parceiro de TI para empresas que buscam segurança e performance</h2>
+      <p class="mt-6 text-gray-800 text-lg max-w-lg">
+        Na <strong>MySeg Informática</strong> oferecemos soluções completas: suporte técnico, segurança da informação, infraestrutura de redes, manutenção de equipamentos e consultoria especializada para empresas de todos os portes.
+      </p>
+      <div class="mt-8 flex gap-4">
+        <a href="#contato" class="bg-blue-900 text-white px-6 py-3 rounded shadow hover:bg-blue-800 transition">Solicitar Proposta</a>
+        <a href="#servicos" class="border border-blue-900 text-blue-900 px-6 py-3 rounded hover:bg-blue-100 transition">Nossos Serviços</a>
+      </div>
+      <p class="mt-6 text-sm text-gray-600">📞 (00) 0000-0000 &nbsp; | &nbsp; 📧 contato@myseg.com.br</p>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="Tecnologia e segurança" class="rounded-lg shadow-lg" />
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="max-w-7xl mx-auto px-6 py-12">
+    <h3 class="text-3xl font-semibold text-blue-900 mb-8">Nossos Serviços</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-semibold text-blue-800 mb-3">Suporte Técnico</h4>
+        <p>Atendimento remoto e presencial para resolução rápida de incidentes e manutenção preventiva.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-semibold text-blue-800 mb-3">Segurança da Informação</h4>
+        <p>Implementação de políticas, firewall, antivírus corporativo, criptografia e backup automatizado.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-semibold text-blue-800 mb-3">Redes e Infraestrutura</h4>
+        <p>Projeto, instalação e monitoramento de redes cabeadas e Wi‑Fi para ambientes empresariais.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-semibold text-blue-800 mb-3">Manutenção de Equipamentos</h4>
+        <p>Reparo, upgrade e gestão de ciclo de vida de computadores, notebooks e servidores.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-semibold text-blue-800 mb-3">Consultoria em TI</h4>
+        <p>Planejamento estratégico, auditoria técnica e redução de custos com tecnologia.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="font-semibold text-blue-800 mb-3">Soluções Personalizadas</h4>
+        <p>Projetos sob medida, integrações e suporte para sistemas específicos de negócio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais -->
+  <section id="diferenciais" class="max-w-7xl mx-auto px-6 py-12 bg-blue-100 rounded-lg my-12">
+    <h3 class="text-3xl font-semibold text-blue-900 mb-8 text-center">Por que escolher a MySeg?</h3>
+    <ul class="max-w-4xl mx-auto grid sm:grid-cols-2 gap-8 text-gray-900 text-lg">
+      <li class="bg-white p-6 rounded shadow text-center">✅ Atendimento rápido e personalizado</li>
+      <li class="bg-white p-6 rounded shadow text-center">✅ Experiência com pequenas, médias e grandes empresas</li>
+      <li class="bg-white p-6 rounded shadow text-center">✅ Soluções sob medida</li>
+      <li class="bg-white p-6 rounded shadow text-center">✅ Parcerias com fornecedores de renome</li>
+    </ul>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="max-w-7xl mx-auto px-6 py-12">
+    <h3 class="text-3xl font-semibold text-blue-900 mb-8 text-center">Contato</h3>
+    <div class="max-w-2xl mx-auto">
+      <p class="mb-6 text-center text-gray-800">Quer conversar sobre uma parceria? Envie uma mensagem ou agende uma reunião.</p>
+      <p class="text-center mb-8 text-gray-700">📞 (00) 0000-0000<br/>📧 <a href="mailto:contato@myseg.com.br" class="text-blue-900 underline">contato@myseg.com.br</a><br/>🌐 www.myseg.com.br</p>
+      <form class="space-y-6" onsubmit="event.preventDefault(); alert('Obrigado pelo contato! Entraremos em breve.'); this.reset();">
+        <input type="text" name="nome" placeholder="Nome completo" required
+               class="w-full px-4 py-3 border border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-blue-700" />
+        <input type="text" name="empresa" placeholder="Empresa"
+               class="w-full px-4 py-3 border border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-blue-700" />
+        <input type="email" name="email" placeholder="E-mail" required
+               class="w-full px-4 py-3 border border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-blue-700" />
+        <textarea name="mensagem" rows="4" placeholder="Mensagem"
+                  class="w-full px-4 py-3 border border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-blue-700"></textarea>
+        <button type="submit" class="w-full bg-blue-900 text-white py-3 rounded font-semibold hover:bg-blue-800 transition">
+          Enviar Mensagem
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer com redes sociais -->
+  <footer class="bg-white py-6 text-center text-gray-700 text-sm flex flex-col items-center gap-2">
+    <div class="flex gap-4 justify-center mb-2">
+      <a href="https://facebook.com/" target="_blank" aria-label="Facebook" class="hover:text-blue-700">
+        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 5.019 3.676 9.167 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.261c-1.243 0-1.631.771-1.631 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.324 21.167 22 17.019 22 12z"/></svg>
+      </a>
+      <a href="https://instagram.com/" target="_blank" aria-label="Instagram" class="hover:text-pink-600">
+        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.309.975.975 1.247 2.242 1.309 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.309 3.608-.975.975-2.242 1.247-3.608 1.309-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.309-.975-.975-1.247-2.242-1.309-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.059-1.281.313-2.393 1.294-3.374.981-.981 2.093-1.235 3.374-1.294C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.131 4.659.385 3.678 1.366c-.981.981-1.235 2.093-1.294 3.374C2.013 8.332 2 8.741 2 12c0 3.259.013 3.668.072 4.948.059 1.281.313 2.393 1.294 3.374.981.981 2.093 1.235 3.374 1.294C8.332 21.987 8.741 22 12 22s3.668-.013 4.948-.072c1.281-.059 2.393-.313 3.374-1.294.981-.981 1.235-2.093 1.294-3.374.059-1.28.072-1.689.072-4.948s-.013-3.668-.072-4.948c-.059-1.281-.313-2.393-1.294-3.374-.981-.981-2.093-1.235-3.374-1.294C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+      <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn" class="hover:text-blue-800">
+        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.867-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.036 0 3.6 2.001 3.6 4.601v5.595z"/></svg>
+      </a>
+    </div>
+    © 2025 MySeg Informática — Segurança e Tecnologia para o seu negócio
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/5500000000000" target="_blank"
+     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg p-4 flex items-center z-50 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24">
+      <path fill="white" d="M12 2a10 10 0 0 0-9.1 14.6l-1.1 4.1a1 1 0 0 0 1.2 1.2l4.1-1.1A10 10 0 1 0 12 2zm5.7 14.3c-.2.5-1.2 1.1-1.7 1.2-.4.1-.9.2-2.9-.6-2.4-.9-3.9-3.3-4-3.5-.1-.2-.9-1.2-.9-2.2s.6-1.5.8-1.7c.2-.2.4-.2.6-.2h.4c.1 0 .3 0 .4.3.1.3.5 1 .6 1.1.1.1.1.2 0 .4-.1.2-.2.3-.3.4-.1.1-.2.2 0 .5.2.3.7 1.2 1.7 2 .8.7 1.5.9 1.8 1 .2 0 .3 0 .4-.1.1-.1.2-.2.3-.3.1-.1.2-.2.4-.1.2.1 1.1.5 1.3.6.2.1.3.1.4.2.1.1.1.5-.1 1z"/>
+    </svg>
+  </a>
+  <!-- Fim botão WhatsApp -->
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
